@@ -1,0 +1,109 @@
+
+
+.back-btn{
+    background-color: var(--element-color);
+    max-width: 140px;
+    color: initial;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration-line: none;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 8px 30px;
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+
+}
+main .container{
+    padding-block: 50px;
+    gap: 50px;
+}
+.country-img{
+    width: 40%;
+    box-shadow: 0px 0px 3px 1px #d3cece;
+}
+.country-data .name{
+    font-size: 34px;
+    font-weight: 800;
+    margin-block: 15px;
+}
+.country-text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 7px;
+    column-gap: 40px;
+    height: 150px;
+}
+.country-text p{
+    font-weight: 700;
+    font-size: 17px;
+}
+.country-text p span{
+    font-weight: initial;
+}
+.border-countries{
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.border-countries span{
+    width: fit-content;
+}
+.border-countries .border{
+    cursor: pointer;
+    padding: 4px 30px;
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    background-color: var(--element-color);
+    border-radius: 5px;
+    font-size: initial;
+    text-decoration-line:none;
+    transition: transform 0.3s ease-in-out;
+}
+.border-countries .border:hover{
+    transform: scale(1.08);
+}
+@media (max-width:1050px) {
+    main .container{
+        gap: 30px;
+    }
+    .country-data .name {
+        font-size: 30px;
+        margin-block: 10px;
+    }
+    .country-text {
+    row-gap: 5px;
+    column-gap: 18px;
+    }
+    .border-countries{
+        margin-top: 0;
+    }
+    .border-countries span{
+    width: 100%;
+   }
+}
+@media (max-width:850px) {
+    main .container{
+        flex-direction: column;
+    }
+    .country-img{
+        width: 56%;
+        min-width: 300px;
+    }
+}
+@media (max-width:550px) {
+    .country-text{
+        height: auto;
+    }
+    .border-countries{
+        margin-top: 20px;
+    }
+    .border-countries span{
+        min-width: fit-content;
+    }
+}
