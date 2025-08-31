@@ -39,7 +39,7 @@ if(borderArray){
         .then(([borderCountries]) => {
         const item= document.createElement('a')
         item.classList.add('border')
-        item.href = `/country.html?name=${borderCountries.name.common}`
+        item.href = `./country.html?name=${borderCountries.name.common}`
         item.innerText= `${borderCountries.name.common}`
         borderCountriesContainer.append(item)
         })
