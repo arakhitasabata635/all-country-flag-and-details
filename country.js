@@ -1,6 +1,7 @@
 const allData = document.querySelector('.all-data')
 const body = document.querySelector('body')
 const darkMode = document.querySelector('.dark-mode')
+const backBtn = document.querySelector('.back-btn')
 
 let darkState = JSON.parse(localStorage.getItem("darkstate"))
   if(darkState){
@@ -47,6 +48,14 @@ if(borderArray){
     
 })
 
+backBtn.addEventListener('click', ()=>{
+  history.back()
+  if(darkState){
+    body.classList.add('dark')
+  }else{
+    body.classList.remove('dark')
+  }
+})
   
 // dark mode
 darkMode.addEventListener('click',()=>{
