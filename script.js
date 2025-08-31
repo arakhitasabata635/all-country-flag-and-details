@@ -19,7 +19,7 @@ function createCuntry(country){
 country.forEach((countryDetails) => {
   const countryCard = document.createElement('a')
           countryCard.classList.add('country-div')
-          countryCard.href= `/country.html?name=${countryDetails.name.common}`
+          countryCard.href= `./country.html?name=${countryDetails.name.common}`
           countryCard.innerHTML= `
           <div class="img-container">
           <img src="${countryDetails.flags.svg}">
