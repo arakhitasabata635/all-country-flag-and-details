@@ -10,9 +10,15 @@ let allCountry;
   localStorage.setItem("darkstate", JSON.stringify(false))
   }
   let darkState = JSON.parse(localStorage.getItem("darkstate"))
+  window.addEventListener("pageshow", () => {
+  let darkState = JSON.parse(localStorage.getItem("darkstate"))
   if(darkState){
     body.classList.add('dark')
-  } 
+  } else {
+      document.body.classList.remove("dark");
+    }
+  });
+
   
 function createCuntry(country){
   countryCointainer.innerHTML = ''

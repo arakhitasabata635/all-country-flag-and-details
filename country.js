@@ -4,9 +4,14 @@ const darkMode = document.querySelector('.dark-mode')
 const backBtn = document.querySelector('.back-btn')
 
 let darkState = JSON.parse(localStorage.getItem("darkstate"))
+window.addEventListener("pageshow", () => {
+let darkState = JSON.parse(localStorage.getItem("darkstate"))
   if(darkState){
     body.classList.add('dark')
-  }
+  } else {
+      document.body.classList.remove("dark");
+    }
+});
 
 const countryURLName = new URLSearchParams(window.location.search).get('name')
 fetch(`https://restcountries.com/v3.1/name/${countryURLName}?fullText=true`)
@@ -50,11 +55,6 @@ if(borderArray){
 
 backBtn.addEventListener('click', ()=>{
   history.back()
-  if(darkState){
-    body.classList.add('dark')
-  }else{
-    body.classList.remove('dark')
-  }
 })
   
 // dark mode
